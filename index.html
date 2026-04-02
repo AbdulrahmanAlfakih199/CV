@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABDULRAHMAN ALI ALFAKIH - Professional Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #3b82f6;
+        }
+        body {
+            font-family: 'Inter', 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
+            background-size: 30px 30px;
+        }
+        [lang="ar"] { font-family: 'Cairo', sans-serif; }
+        
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        
+        .modern-nav {
+            backdrop-filter: blur(15px);
+            background-color: rgba(255, 255, 255, 0.8);
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .section-heading {
+            position: relative;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        [dir="rtl"] .section-heading::after {
+            left: auto;
+            right: 0;
+        }
+
+        .exp-card {
+            border-left: 2px solid #e2e8f0;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+        [dir="rtl"] .exp-card {
+            border-left: none;
+            border-right: 2px solid #e2e8f0;
+            padding-left: 0;
+            padding-right: 1.5rem;
+        }
+
+        .exp-card::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: var(--secondary);
+            border-radius: 50%;
+        }
+        [dir="rtl"] .exp-card::before {
+            left: auto;
+            right: -6px;
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; padding: 0; }
+            .main-container { box-shadow: none !important; border: none !important; border-radius: 0 !important; }
+            .modern-nav { display: none !important; }
+        }
+    </style>
+</head>
+<body class="py-8 px-4">
+
+    <!-- Navigation Bar -->
+    <header class="modern-nav max-w-5xl mx-auto mb-10 no-print rounded-3xl border border-white shadow-2xl p-3 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-4 px-4">
+            <div class="bg-blue-600 p-2.5 rounded-2xl shadow-lg shadow-blue-200">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+            </div>
+            <div>
+                <span class="block text-[10px] text-slate-400 font-black uppercase tracking-[0.2em]">Profile Menu</span>
+                <span id="current-lang-label" class="text-sm font-bold text-slate-800 uppercase tracking-tighter">English Mode</span>
+            </div>
+        </div>
+
+        <div class="flex bg-slate-100/50 p-1.5 rounded-2xl border border-slate-200" id="controls">
+            <button onclick="setLanguage('en')" id="btn-en" class="lang-btn active px-8 py-2.5 rounded-xl text-xs font-black transition-all bg-white text-blue-600 shadow-sm">ENGLISH</button>
+            <button onclick="setLanguage('ar')" id="btn-ar" class="lang-btn px-8 py-2.5 rounded-xl text-xs font-black transition-all text-slate-500 hover:text-slate-800">العربية</button>
+            <button onclick="setLanguage('tr')" id="btn-tr" class="lang-btn px-8 py-2.5 rounded-xl text-xs font-black transition-all text-slate-500 hover:text-slate-800">TÜRKÇE</button>
+        </div>
+        <div class="px-4 hidden md:block w-32"></div>
+    </header>
+
+    <div class="main-container max-w-5xl mx-auto bg-white rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200 border border-white">
+        
+        <!-- ENGLISH VERSION -->
+        <div id="view-en" class="lang-content active" lang="en" dir="ltr">
+            <div class="flex flex-col md:flex-row">
+                <aside class="w-full md:w-80 bg-slate-900 text-white p-10">
+                    <div class="mb-12">
+                        <div class="w-10 h-1 bg-blue-500 mb-6 rounded-full"></div>
+                        <h1 class="text-2xl font-bold leading-tight uppercase tracking-tighter">ABDULRAHMAN ALI ALFAKIH</h1>
+                        <div class="text-blue-400 text-[11px] mt-3 uppercase font-bold opacity-90 space-y-1 tracking-wider leading-relaxed">
+                            <p>Computer Engineer</p>
+                            <p>Brand & Strategic Projects Manager</p>
+                            <p>Visual Content Designer</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-10">
+                        <!-- Contact -->
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-[0.2em] mb-5">Contact</h3>
+                            <div class="text-[11px] space-y-4 opacity-90">
+                                <p class="flex items-center gap-3">📧 Abdulrhmanalfakih538@gmail.com</p>
+                                <p class="flex items-center gap-3">📞 +90 552 686 01 28</p>
+                                <p class="flex items-center gap-3">📍 Isparta / Istanbul, Turkey</p>
+                                <p class="flex items-center gap-3">
+                                    <svg class="w-4 h-4 text-blue-400 fill-current shrink-0" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    <a href="https://www.linkedin.com/in/abdulrahman-alfakih-1aaa343ba" class="hover:text-blue-400 underline">linkedin.com/in/abdulrahman-alfakih</a>
+                                </p>
+                                <p class="flex items-center gap-3">
+                                    <svg class="w-4 h-4 text-white fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <a href="https://github.com/AbdulrahmanAlfakih199" class="hover:text-blue-400 underline">github.com/AbdulrahmanAlfakih</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Technical Skills -->
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-[0.2em] mb-5">Technical Skills</h3>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-blue-600/20 text-blue-400 px-2 py-1 rounded text-[10px] font-bold border border-blue-500/20 shrink-0">Python</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">C# / C++ / Java / JS</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">HTML & CSS</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">Machine Learning</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe Photoshop</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe Illustrator</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe InDesign</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe After Effects</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe Premiere Pro</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">Microsoft Office Suite</span>
+                            </div>
+                            <h4 class="text-[10px] font-bold uppercase text-slate-600 mb-3 tracking-widest">Soft Skills</h4>
+                            <div class="text-[10px] space-y-1 text-slate-400 italic">
+                                <p>• Team Leadership & Performance Improvement</p>
+                                <p>• Decision Making & Strategic Thinking</p>
+                                <p>• Negotiation & Persuasion Skills</p>
+                                <p>• Problem Solving & Critical Thinking</p>
+                                <p>• Teamwork & Collaboration</p>
+                                <p>• Effective Communication Skills</p>
+                                <p>• Creativity & Adaptability</p>
+                                <p>• Time Management & Task Prioritization</p>
+                            </div>
+                        </div>
+
+                        <!-- Values -->
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-[0.2em] mb-5">Values</h3>
+                            <div class="text-[11px] text-slate-300 flex items-center gap-2">
+                                <span>📖</span> <span>Hafiz of the Holy Quran</span>
+                            </div>
+                        </div>
+
+                        <!-- Brief Languages (Sidebar) -->
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-[0.2em] mb-5">Languages</h3>
+                            <div class="space-y-2 text-[11px]">
+                                <div class="flex justify-between"><span>Arabic</span><span class="text-blue-400 italic shrink-0">Native</span></div>
+                                <div class="flex justify-between"><span>Turkish</span><span class="text-blue-400 italic shrink-0">Good</span></div>
+                                <div class="flex justify-between"><span>English</span><span class="text-blue-400 italic shrink-0">Good</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Interests -->
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-[0.2em] mb-5">Interests</h3>
+                            <div class="text-[10px] space-y-2 opacity-70 italic">
+                                <p>• Reading</p>
+                                <p>• Information Security</p>
+                                <p>• Programming</p>
+                                <p>• Solving Puzzles</p>
+                                <p>• Following latest AI developments</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Content EN -->
+                <main class="flex-1 p-10 md:p-14">
+                    <section class="mb-14">
+                        <h2 class="section-heading text-xl uppercase tracking-tighter">Professional Summary</h2>
+                        <p class="text-slate-600 leading-relaxed text-justify text-sm">
+                            Computer Engineering student at Isparta University of Applied Sciences with a robust technical foundation. A multidisciplinary expert with over 7 years of specialized experience in Commercial Brand Design and 3 years as Head of Creative and Strategic Departments. Expert in blending analytical engineering logic with high-level creative strategy to lead impactful brand projects.
+                        </p>
+                    </section>
+
+                    <section class="mb-14">
+                        <h2 class="section-heading text-xl uppercase tracking-tighter">Work Experience</h2>
+                        <div class="space-y-6">
+                            <!-- Job 1 -->
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800 text-lg">Head of Creative & Strategic Department</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2023 – 2026</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">Sanad Groups (Travel, Tourism & Educational Services)</p>
+                                <ul class="text-xs text-slate-600 list-disc list-inside space-y-1">
+                                    <li>Executive Director.</li>
+                                    <li>Creative & Strategic Leadership.</li>
+                                    <li>Visual Content Design & Branding.</li>
+                                </ul>
+                                <p class="text-[10px] text-slate-400 mt-2 italic">Contact: info@sanadgroups.com</p>
+                            </div>
+
+                            <!-- Job 2: Visual Content Designer -->
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800 text-lg">Visual Content Designer</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2019 – 2023</span>
+                                </div>
+                                <div class="space-y-3 mt-2">
+                                    <div>
+                                        <p class="text-[11px] text-slate-800 font-bold">• Yemen Al-Saeed Real Estate (Yemen) | 2023</p>
+                                        <p class="text-[10px] text-slate-500 italic px-3">Contact: alymn.alsayd.marp@gmail.com</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[11px] text-slate-800 font-bold">• Al Saeeda Stores (Qatar) | 2022</p>
+                                        <p class="text-[10px] text-slate-500 italic px-3">Contact: instagram.com/alsaeedatra</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[11px] text-slate-800 font-bold">• Sahaba Travel & Tourism (Trabzon) | 2021</p>
+                                        <p class="text-[10px] text-slate-500 italic px-3">Contact: info@sahabtravel.com.tr</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[11px] text-slate-800 font-bold">• Mint Therapeutic Services (Istanbul) | 2020 – 2022</p>
+                                        <p class="text-[10px] text-slate-500 italic px-3">Contact: Connect@minthc.net</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[11px] text-slate-800 font-bold">• Hekaya Student Services (Istanbul) | 2019</p>
+                                        <p class="text-[10px] text-slate-500 italic px-3">Contact: Kasim@hikayetr.net</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Job 3: Union -->
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800 text-lg">President / Creative Lead</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2022 – 2023</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">Yemeni Students Union in Turkey | Giresun Branch</p>
+                                <ul class="text-xs text-slate-600 list-disc list-inside space-y-1">
+                                    <li>Union President.</li>
+                                    <li>Visual Content Designer.</li>
+                                    <li>Creative & Strategic Dept. Head.</li>
+                                </ul>
+                                <p class="text-[10px] text-slate-400 mt-1 italic">Contact: y.o.b.turkiye@gmail.com</p>
+                            </div>
+
+                            <!-- Job 4: Ithraa -->
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800 text-lg">Creative Head / Founding Member</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2020 – 2021</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">Ithraa Cultural Reading Club | Giresun, Turkey</p>
+                                <ul class="text-xs text-slate-600 list-disc list-inside space-y-1">
+                                    <li>Founding Member.</li>
+                                    <li>Visual Content Designer.</li>
+                                    <li>Creative & Strategic Dept. Head.</li>
+                                </ul>
+                                <p class="text-[10px] text-slate-400 mt-2 italic">Contact: instagram.com/ithraa.1</p>
+                            </div>
+
+                            <!-- Job 5: That -->
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800 text-lg">Club President / Creative Head</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2021 – 2022</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">That Cultural Club | Isparta, Turkey</p>
+                                <ul class="text-xs text-slate-600 list-disc list-inside space-y-1">
+                                    <li>Club President.</li>
+                                    <li>Visual Content Designer.</li>
+                                    <li>Creative & Strategic Dept. Head.</li>
+                                </ul>
+                                <p class="text-[10px] text-slate-400 mt-2 italic">Contact: instagram.com/thatclup</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="section-heading text-xl uppercase tracking-tighter">Education & Language Programs</h2>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Bachelor's in Computer Engineering</h4>
+                                    <p class="text-xs text-blue-600 mt-1">Isparta University of Applied Sciences</p>
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-400 shrink-0">2022 – Present</span>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                                    <p class="font-bold text-sm">Turkish Language Program</p>
+                                    <p class="text-blue-600 text-xs">Giresun University</p>
+                                    <p class="text-[10px] text-slate-400 mt-2 font-bold uppercase italic text-right">2020 – 2021</p>
+                                </div>
+                                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                                    <p class="font-bold text-sm">English Course</p>
+                                    <p class="text-blue-600 text-xs">English Castle School</p>
+                                    <p class="text-[10px] text-slate-400 mt-2 font-bold uppercase italic text-right">2021 – 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+
+        <!-- ARABIC VERSION (Full & Matched) -->
+        <div id="view-ar" class="lang-content" lang="ar" dir="rtl">
+            <div class="flex flex-col md:flex-row-reverse">
+                <aside class="w-full md:w-80 bg-slate-900 text-white p-10">
+                    <div class="mb-12 text-right">
+                        <div class="w-10 h-1 bg-blue-500 mb-6 rounded-full mr-0 ml-auto"></div>
+                        <h1 class="text-3xl font-bold leading-tight">عبد الرحمن علي الفقيه</h1>
+                        <div class="text-blue-400 text-[13px] mt-3 uppercase font-bold opacity-90 space-y-1 leading-relaxed">
+                            <p>مهندس حاسوب</p>
+                            <p>مدير العلامة التجارية والمشاريع الاستراتيجية</p>
+                            <p>مصمم المحتوى البصري</p>
+                        </div>
+                    </div>
+                    <div class="space-y-10 text-right">
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-widest mb-5">بيانات الاتصال</h3>
+                            <div class="text-[11px] space-y-4 opacity-90">
+                                <p>📧 Abdulrhmanalfakih538@gmail.com</p>
+                                <p>📞 +90 552 686 01 28</p>
+                                <p>📍 اسبارطة / اسطنبول، تركيا</p>
+                                <p class="flex items-center gap-3 shrink-0">
+                                    <svg class="w-4 h-4 text-blue-400 fill-current shrink-0" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    <a href="https://www.linkedin.com/in/abdulrahman-alfakih-1aaa343ba" class="hover:text-blue-400 underline text-right">linkedin.com/in/abdulrahman-alfakih</a>
+                                </p>
+                                <p class="flex items-center gap-3 shrink-0">
+                                    <svg class="w-4 h-4 text-white fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <a href="https://github.com/AbdulrahmanAlfakih199" class="hover:text-blue-400 underline text-right">github.com/AbdulrahmanAlfakih</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-widest mb-5">المهارات التقنية</h3>
+                            <div class="flex flex-wrap gap-2 justify-start mb-6">
+                                <span class="bg-blue-600/20 text-blue-400 px-2 py-1 rounded text-[10px] font-bold border border-blue-500/20 shrink-0">Python</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">C# / C++ / Java / JS</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">HTML & CSS</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">Machine Learning</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe Photoshop</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe Illustrator</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe InDesign</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">After Effects / Premiere</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">Microsoft Office Suite</span>
+                            </div>
+                            <h4 class="text-[10px] font-bold uppercase text-slate-600 mb-3 tracking-widest">مهارات شخصية</h4>
+                            <div class="text-[10px] space-y-1 text-slate-400 leading-relaxed italic">
+                                <p>• قيادة الفريق وتحسين الأداء</p>
+                                <p>• اتخاذ القرار والتفكير الاستراتيجي</p>
+                                <p>• مهارات التفاوض والإقناع</p>
+                                <p>• حل المشكلات والتفكير النقدي</p>
+                                <p>• العمل الجماعي والتعاون</p>
+                                <p>• مهارات التواصل الفعال</p>
+                                <p>• الإبداع والقدرة على التكيف</p>
+                                <p>• إدارة الوقت وتحديد الأولويات</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-widest mb-5">الأخلاق والقيم</h3>
+                            <p class="text-[11px] opacity-90 leading-relaxed">• حافظ للقرآن الكريم</p>
+                        </div>
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-widest mb-5">اللغات</h3>
+                            <div class="space-y-2 text-[11px]">
+                                <div class="flex justify-between"><span>العربية</span><span class="text-blue-400 italic shrink-0">اللغة الأم</span></div>
+                                <div class="flex justify-between"><span>التركية</span><span class="text-blue-400 italic shrink-0">جيد </span></div>
+                                <div class="flex justify-between"><span>الإنجليزية</span><span class="text-blue-400 italic shrink-0">جيد </span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-widest mb-5">الاهتمامات</h3>
+                            <div class="text-[10px] grid grid-cols-1 gap-2 opacity-60">
+                                <span>• القراءة</span>
+                                <span>• أمن المعلومات</span>
+                                <span>• البرمجة</span>
+                                <span>• حل الألغاز</span>
+                                <span>• متابعة جديد الذكاء الاصطناعي</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <main class="flex-1 p-10 md:p-14 text-right">
+                    <section class="mb-14">
+                        <h2 class="section-heading text-2xl">الملخص المهني</h2>
+                        <p class="text-sm text-slate-600 leading-relaxed text-justify text-sm">
+                            طالب في السنة الأخيرة بتخصص هندسة الحاسوب بجامعة اسبارطة للعلوم التطبيقية. خبير متعدد التخصصات بخبرة تزيد عن 7 سنوات في تصميم الهويات التجارية و3 سنوات كرئيس للقسم الإبداعي والاستراتيجي. أمتلك مهارات فريدة في دمج التفكير الهندسي مع الاستراتيجيات الإبداعية لقيادة مشاريع العلامات التجارية الكبرى وتحقيق نتائج استراتيجية.
+                        </p>
+                    </section>
+
+                    <section class="mb-14">
+                        <h2 class="section-heading text-2xl">الخبرة العملية</h2>
+                        <div class="space-y-6">
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800 text-lg">رئيس القسم الإبداعي والاستراتيجي</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2023 – 2026</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">مجموعة سند (للسياحة والخدمات التعليمية) | اليمن وتركيا</p>
+                                <ul class="text-xs text-slate-600 space-y-1">
+                                    <li class="exp-bullet">المدير التنفيذي للمجموعة.</li>
+                                    <li class="exp-bullet">قيادة الاستراتيجيات والمشاريع الإبداعية.</li>
+                                </ul>
+                                <p class="text-[10px] text-slate-400 mt-2 italic text-right">للتواصل: info@sanadgroups.com</p>
+                            </div>
+
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800 text-lg">مصمم محتوى بصري</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2019 – 2023</span>
+                                </div>
+                                <div class="space-y-3 mt-3">
+                                    <div class="text-[11px] text-slate-700">
+                                        <strong>• عقارات اليمن السعيد (مأرب) | 2023</strong>
+                                        <p class="text-[10px] text-slate-500 italic pr-3 text-right">للتواصل: alymn.alsayd.marp@gmail.com</p>
+                                    </div>
+                                    <div class="text-[11px] text-slate-700">
+                                        <strong>• متاجر السعيدة (قطر) | 2022</strong>
+                                        <p class="text-[10px] text-slate-500 italic pr-3 text-right">للتواصل: instagram.com/alsaeedatra</p>
+                                    </div>
+                                    <div class="text-[11px] text-slate-700">
+                                        <strong>• سحاب للسياحة (طرابزون) | 2021</strong>
+                                        <p class="text-[10px] text-slate-500 italic pr-3 text-right">للتواصل: info@sahabtravel.com.tr</p>
+                                    </div>
+                                    <div class="text-[11px] text-slate-700">
+                                        <strong>• مينت للخدمات الصحية (اسطنبول) | 2020-2022</strong>
+                                        <p class="text-[10px] text-slate-500 italic pr-3 text-right">للتواصل: Connect@minthc.net</p>
+                                    </div>
+                                    <div class="text-[11px] text-slate-700">
+                                        <strong>• حكاية للخدمات التعليمية (اسطنبول) | 2019</strong>
+                                        <p class="text-[10px] text-slate-500 italic pr-3 text-right">للتواصل: Kasim@hikayetr.net</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800 text-lg">رئيس الاتحاد / المسؤول الإبداعي</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2022 – 2023</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">اتحاد الطلاب اليمنيين في تركيا | فرع غيرسون</p>
+                                <p class="text-[10px] text-slate-400 mt-1">للتواصل: y.o.b.turkiye@gmail.com</p>
+                            </div>
+
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800 text-lg">رئيس القسم الإبداعي / عضو مؤسس</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2020 – 2021</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">نادي إثراء الثقافي للقراءة | غيرسون، تركيا</p>
+                                <p class="text-[10px] text-slate-400 mt-2">للتواصل: instagram.com/ithraa.1</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="section-heading text-2xl">التعليم وبرامج اللغات</h2>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">بكالوريوس هندسة الحاسوب</h4>
+                                    <p class="text-xs text-blue-600">جامعة اسبارطة للعلوم التطبيقية</p>
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-400 shrink-0">2022 – حالياً</span>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                                    <p class="font-bold text-sm">برنامج اللغة التركية</p>
+                                    <p class="text-blue-600 text-xs">جامعة غيرسون</p>
+                                    <p class="text-[10px] text-slate-400 mt-2 font-bold uppercase italic text-right">2020 – 2021</p>
+                                </div>
+                                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                                    <p class="font-bold text-sm">دورة اللغة الإنجليزية</p>
+                                    <p class="text-blue-600 text-xs">مدرسة English Castle</p>
+                                    <p class="text-[10px] text-slate-400 mt-2 font-bold uppercase italic text-right">2021 – 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+
+        <!-- TURKISH VERSION (Refined & Matched) -->
+        <div id="view-tr" class="lang-content" lang="tr" dir="ltr">
+            <div class="flex flex-col md:flex-row">
+                <!-- Sidebar TR -->
+                <aside class="w-full md:w-80 bg-slate-900 text-white p-10">
+                    <div class="mb-12">
+                        <div class="w-10 h-1 bg-blue-500 mb-6 rounded-full"></div>
+                        <h1 class="text-2xl font-bold leading-tight uppercase tracking-tighter">ABDULRAHMAN ALI ALFAKIH</h1>
+                        <div class="text-blue-400 text-[11px] mt-3 uppercase font-bold opacity-90 space-y-1 tracking-wider leading-relaxed">
+                            <p>Bilgisayar Mühendisi</p>
+                            <p>Marka ve Stratejik Projeler Müdürü</p>
+                            <p>Görsel İçerik Tasarımcısı</p>
+                        </div>
+                    </div>
+                    <div class="space-y-10">
+                        <!-- Contact TR -->
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-[0.2em] mb-4">İletişim</h3>
+                            <div class="text-[11px] space-y-4 opacity-90">
+                                <p>📧 Abdulrhmanalfakih538@gmail.com</p>
+                                <p>📞 +90 552 686 01 28</p>
+                                <p>📍 Isparta / İstanbul, Türkiye</p>
+                                <p class="flex items-center gap-2 shrink-0">
+                                    <svg class="w-4 h-4 text-blue-400 fill-current shrink-0" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    <a href="https://www.linkedin.com/in/abdulrahman-alfakih-1aaa343ba" class="hover:text-blue-400 underline">linkedin.com/in/abdulrahman-alfakih</a>
+                                </p>
+                                <p class="flex items-center gap-2 shrink-0">
+                                    <svg class="w-4 h-4 text-white fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <a href="https://github.com/AbdulrahmanAlfakih199" class="hover:text-blue-400">github.com/AbdulrahmanAlfakih</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Technical Skills TR (STAYED COMPLETE) -->
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-[0.2em] mb-4">Teknik Yetenekler</h3>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-blue-600/20 text-blue-400 px-2 py-1 rounded text-[10px] font-bold shrink-0">Python</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">C# / C++ / Java / JS</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">HTML & CSS</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">Makine Öğrenmesi</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe Photoshop</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe Illustrator</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe InDesign</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe After Effects</span>
+                                <span class="bg-blue-500/10 text-blue-300 px-2 py-1 rounded text-[10px] shrink-0 font-bold">Adobe Premiere Pro</span>
+                                <span class="bg-slate-800 px-2 py-1 rounded text-[10px]">Microsoft Office Suite</span>
+                            </div>
+                            <h4 class="text-[10px] font-bold uppercase text-slate-600 mb-2">Sosyal Beceriler</h4>
+                            <div class="text-[10px] space-y-1 opacity-80 italic leading-relaxed">
+                                <p>• Ekip Liderliği ve Performans İyileştirme</p>
+                                <p>• Karar Verme ve Stratejik Düşünme</p>
+                                <p>• Müzakere ve İkna Becerileri</p>
+                                <p>• Problem Çözme ve Eleştirel Düşünme</p>
+                                <p>• Takım Çalışması ve İşbirliği</p>
+                                <p>• Etkili İletişim Becerileri</p>
+                                <p>• Yaratıcılık ve Uyumluluk</p>
+                                <p>• Zaman Yönetimi ve Görev Önceliklendirme</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-[0.2em] mb-4">Değerler</h3>
+                            <div class="text-[11px] text-slate-300 flex items-center gap-2 shrink-0">
+                                <span>📖</span> <span>Kur'an-ı Kerim Hafızı</span>
+                            </div>
+                        </div>
+                        <!-- Languages Brief TR Sidebar -->
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-widest mb-4">Diller</h3>
+                            <div class="space-y-2 text-[11px]">
+                                <div class="flex justify-between"><span>Arapça</span><span class="text-blue-400 italic shrink-0">Anadil</span></div>
+                                <div class="flex justify-between"><span>Türkçe</span><span class="text-blue-400 italic shrink-0">İyi</span></div>
+                                <div class="flex justify-between"><span>İngilizce</span><span class="text-blue-400 italic shrink-0">İyi</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-[10px] font-bold uppercase text-slate-500 tracking-widest mb-4">İlgi Alanları</h3>
+                            <div class="text-[10px] space-y-2 opacity-60 italic">
+                                <p>• Okuma</p>
+                                <p>• Bilgi Güvenliği</p>
+                                <p>• Programlama</p>
+                                <p>• Bulmaca Çözme</p>
+                                <p>• Yapay Zeka Gelişmeleri</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <main class="flex-1 p-10 md:p-14">
+                    <section class="mb-14">
+                        <h2 class="section-heading text-xl uppercase tracking-tighter">Profesyonel Özet</h2>
+                        <p class="text-slate-600 leading-relaxed text-justify text-sm">
+                            Isparta Uygulamalı Bilimler Üniversitesi Bilgisayar Mühendisliği son sınıf öğrencisidir. Ticari Marka Tasarımı alanında 7 yılı aşkın uzmanlığa ve Yaratıcı ve Stratejik Departman Başkanı olarak 3 yıllık deneyime sahip, çok disiplinli bir uzmandır. Marka projelerine liderlik etmek için mühendislik mantığını yaratıcı stratejiyle harmanlama konusunda uzmandır.
+                        </p>
+                    </section>
+                    
+                    <section class="mb-14">
+                        <h2 class="section-heading text-xl uppercase tracking-tighter">İş Deneyimi</h2>
+                        <div class="space-y-6 text-sm">
+                            <!-- Job 1 TR -->
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800">Yaratıcı ve Stratejik Departman Başkanı</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2023 – 2026</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">Sanad Grupları (Turizm ve Eğitim Hizmetleri)</p>
+                                <ul class="text-xs text-slate-600 list-disc list-inside space-y-1">
+                                    <li>İcra Direktörü.</li>
+                                    <li>Yaratıcı ve Stratejik Liderlik.</li>
+                                    <li>Görsel İçerik Tasarımı ve Markalaşma.</li>
+                                </ul>
+                                <p class="text-[10px] text-slate-400 mt-2 italic">İletişim: info@sanadgroups.com</p>
+                            </div>
+
+                            <!-- Job 2 TR: Visual Content Designer -->
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800">Görsel İçerik Tasarımcısı</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2019 – 2023</span>
+                                </div>
+                                <div class="space-y-3 mt-2">
+                                    <div>
+                                        <p class="text-[11px] text-slate-800 font-bold">• Yemen Al-Saeed Gayrimenkul (Yemen) | 2023</p>
+                                        <p class="text-[10px] text-slate-500 italic px-3">İletişim: alymn.alsayd.marp@gmail.com</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[11px] text-slate-800 font-bold">• Al Saeeda Mağazaları (Katar) | 2022</p>
+                                        <p class="text-[10px] text-slate-500 italic px-3">İletişim: instagram.com/alsaeedatra</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[11px] text-slate-800 font-bold">• Sahaba Turizm (Trabzon) | 2021</p>
+                                        <p class="text-[10px] text-slate-500 italic px-3">İletişim: info@sahabtravel.com.tr</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[11px] text-slate-800 font-bold">• Mint Tedavi Hizmetleri (İstanbul) | 2020 – 2022</p>
+                                        <p class="text-[10px] text-slate-500 italic px-3">İletişim: Connect@minthc.net</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[11px] text-slate-800 font-bold">• Hekaya Öğrenci Hizmetleri (İstanbul) | 2019</p>
+                                        <p class="text-[10px] text-slate-500 italic px-3">İletişim: Kasim@hikayetr.net</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Job 3 TR -->
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800">Birlik Başkanı / Yaratıcı Lider</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2022 – 2023</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">Türkiye'deki Yemenli Öğrenciler Birliği | Giresun Şubesi</p>
+                                <ul class="text-xs text-slate-600 list-disc list-inside space-y-1">
+                                    <li>Birlik Başkanı.</li>
+                                    <li>Görsel İçerik Tasarımcısı.</li>
+                                    <li>Yaratıcı ve Stratejik Bölüm Başkanı.</li>
+                                </ul>
+                                <p class="text-[10px] text-slate-400 mt-1 italic">İletişim: y.o.b.turkiye@gmail.com</p>
+                            </div>
+
+                            <!-- Job 4 TR -->
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800">Yaratıcı Başkan / Kurucu Üye</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2020 – 2021</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">Ithraa Kültür Okuma Kulübü | Giresun, Türkiye</p>
+                                <ul class="text-xs text-slate-600 list-disc list-inside space-y-1">
+                                    <li>Kurucu Üye.</li>
+                                    <li>Görsel İçerik Tasarımcısı.</li>
+                                    <li>Yaratıcı ve Stratejik Bölüm Başkanı.</li>
+                                </ul>
+                                <p class="text-[10px] text-slate-400 mt-2 italic">İletişim: instagram.com/ithraa.1</p>
+                            </div>
+
+                            <!-- Job 5 TR -->
+                            <div class="exp-card">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="font-bold text-slate-800">Kulüp Başkanı / Yaratıcı Başkan</h4>
+                                    <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded shrink-0">2021 – 2022</span>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-500 mb-2">That Kültür Kulübü | Isparta, Türkiye</p>
+                                <ul class="text-xs text-slate-600 list-disc list-inside space-y-1">
+                                    <li>Kulüp Başkanı.</li>
+                                    <li>Görsel İçerik Tasarımcısı.</li>
+                                    <li>Yaratıcı ve Stratejik Bölüm Başkanı.</li>
+                                </ul>
+                                <p class="text-[10px] text-slate-400 mt-2 italic">İletişim: instagram.com/thatclup</p>
+                            </div>
+                        </div>
+
+                        <h2 class="section-heading text-xl mt-10 uppercase tracking-tighter">Eğitim & Dil Programları</h2>
+                        <div class="space-y-4">
+                            <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Bilgisayar Mühendisliği Lisans</h4>
+                                        <p class="text-xs text-blue-600 mt-1">Isparta Uygulamalı Bilimler Üniversitesi</p>
+                                    </div>
+                                    <span class="text-[10px] text-slate-400 font-bold shrink-0">2022 – GÜNÜMÜZ</span>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-xs">Türkçe Dil Programı</p>
+                                    <p class="text-blue-600 text-[10px]">Giresun Üniversitesi</p>
+                                    <p class="text-[9px] text-slate-400 font-bold uppercase italic mt-1">2020 – 2021</p>
+                                </div>
+                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-xs">İngilizce Kursu</p>
+                                    <p class="text-blue-600 text-[10px]">English Castle Okulu</p>
+                                    <p class="text-[9px] text-slate-400 font-bold uppercase italic mt-1">2021 – 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.getElementById('view-' + lang).classList.add('active');
+
+            const labels = {
+                'en': 'English Mode',
+                'ar': 'الوضع العربي الكامل',
+                'tr': 'Türkçe Versiyonu'
+            };
+            document.getElementById('current-lang-label').innerText = labels[lang];
+
+            const btns = ['en', 'ar', 'tr'];
+            btns.forEach(b => {
+                const btn = document.getElementById('btn-' + b);
+                if (b === lang) {
+                    btn.classList.add('bg-white', 'text-blue-600', 'shadow-sm', 'active');
+                    btn.classList.remove('text-slate-500');
+                } else {
+                    btn.classList.remove('bg-white', 'text-blue-600', 'shadow-sm', 'active');
+                    btn.classList.add('text-slate-500');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
